@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/components/sideCategories.jsp" value="file://$PROJECT_DIR$/src/main/webapp/components" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/Product/ProductDetail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/Product" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/SectionHomePage/SectionCarousel.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/SectionHomePage" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/User/User.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/User" />
+      </map>
+    </option>
+  </component>
+</project>
