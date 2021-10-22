@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/components/sideCategories.jsp" value="file://$PROJECT_DIR$/src/main/webapp/components" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/Product/FormReview.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/Product" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/Product/ProductDetail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/Product" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/SectionHomePage/SectionCarousel.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/SectionHomePage" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/frontend/User/User.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frontend/User" />

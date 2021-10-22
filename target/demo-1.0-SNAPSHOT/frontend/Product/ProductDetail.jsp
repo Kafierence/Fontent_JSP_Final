@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/common/taglib.jsp" %>
 <html>
-<head>
-    <title>Product Detail</title>
-    <jsp:include page="/importCss.jsp"/>
+    <head>
+        <title>Product Detail</title>
+        <jsp:include page="/importCss.jsp"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <c:import url="/components/Header.jsp"/>
@@ -105,13 +107,13 @@
                                             <div class="js-quantity">
                                                 <div class="d-flex align-items-center">
                                                     <label class="screen-reader-text sr-only">Quantity</label>
-                                                    <a class="js-minus text-dark" href="javascript:;">
+                                                    <a class=" text-dark " id="js-minus" style="cursor: pointer">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="1px">
                                                             <path fill-rule="evenodd" fill="rgb(22, 22, 25)" d="M-0.000,-0.000 L10.000,-0.000 L10.000,1.000 L-0.000,1.000 L-0.000,-0.000 Z"></path>
                                                         </svg>
                                                     </a>
-                                                    <input type="number" class="input-text qty text js-result form-control text-center border-0" step="1" min="1" max="100" name="quantity" value="1" title="Qty">
-                                                    <a class="js-plus text-dark" href="javascript:;">
+                                                    <input type="number" id="js-result" class="input-text qty text  form-control text-center border-0" step="1" min="1" max="100" name="quantity" value="1" title="Qty">
+                                                    <a class=" text-dark " id="js-plus" style="cursor: pointer">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px">
                                                             <path fill-rule="evenodd" fill="rgb(22, 22, 25)" d="M10.000,5.000 L6.000,5.000 L6.000,10.000 L5.000,10.000 L5.000,5.000 L-0.000,5.000 L-0.000,4.000 L5.000,4.000 L5.000,-0.000 L6.000,-0.000 L6.000,4.000 L10.000,4.000 L10.000,5.000 Z"></path>
                                                         </svg>
@@ -119,7 +121,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Quantity -->
+
                                     </div>
 
                                     <button type="submit" name="add-to-cart" value="7145" class="btn btn-dark border-0 rounded-0 p-3 btn-block ml-md-4 font-size-3">Add to cart</button>
@@ -239,244 +241,7 @@
 
                 <div class="ecommerce-Tabs-panel panel entry-content wc-tab tab-pane fade border-left pl-4 pt-4 pl-lg-6 pt-lg-6 pl-xl-9 pt-xl-9" id="fill-user-review" role="tabpanel" aria-labelledby="fill-user-review">
                     <!-- Mockup Block -->
-                    <h4 class="font-size-3">Customer Reviews </h4>
-                    <div class="mb-8">
-                        <div class="mb-6">
-                            <div class="d-flex  align-items-center mb-4">
-                                <span class="font-size-15 font-weight-bold">4.6</span>
-                                <div class="ml-3 h6 mb-0">
-                                    <span class="font-weight-normal">3,714 reviews</span>
-                                    <div class="text-yellow-darker">
-                                        <small class="fas fa-star"></small>
-                                        <small class="fas fa-star"></small>
-                                        <small class="fas fa-star"></small>
-                                        <small class="fas fa-star"></small>
-                                        <small class="far fa-star"></small>
-                                    </div>
-                                </div>
-                            </div> <!--Will load from form and compute-->
-
-                            <div class="d-xl-flex">
-                                <button type="button" class="d-block btn btn-outline-dark rounded-0 px-5 mb-3 mb-xl-0">See all reviews</button>
-                                <button type="button" class="d-block btn btn-dark ml-xl-3 rounded-0 px-5" id="#form-write-review">Write a review</button>
-                            </div>
-                        </div>
-                        <div class="">
-                            <!-- Ratings -->
-                            <ul class="list-unstyled">
-                                <li class="py-2">
-                                    <a class="row align-items-center mx-gutters-2 font-size-2" href="javascript:;">
-                                        <div class="col-auto">
-                                            <span class="text-dark">5 stars</span>
-                                        </div>
-                                        <div class="col px-0">
-                                            <div class="progress bg-white-100" style="height: 7px;">
-                                                <div class="progress-bar bg-yellow-darker" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <span class="text-secondary">205</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="py-2">
-                                    <a class="row align-items-center mx-gutters-2 font-size-2" href="javascript:;">
-                                        <div class="col-auto">
-                                            <span class="text-dark">4 stars</span>
-                                        </div>
-                                        <div class="col px-0">
-                                            <div class="progress bg-white-100" style="height: 7px;">
-                                                <div class="progress-bar bg-yellow-darker" role="progressbar" style="width: 53%;" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <span class="text-secondary">55</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="py-2">
-                                    <a class="row align-items-center mx-gutters-2 font-size-2" href="javascript:;">
-                                        <div class="col-auto">
-                                            <span class="text-dark">3 stars</span>
-                                        </div>
-                                        <div class="col px-0">
-                                            <div class="progress bg-white-100" style="height: 7px;">
-                                                <div class="progress-bar bg-yellow-darker" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <span class="text-secondary">23</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="py-2">
-                                    <a class="row align-items-center mx-gutters-2 font-size-2" href="javascript:;">
-                                        <div class="col-auto">
-                                            <span class="text-dark">2 stars</span>
-                                        </div>
-                                        <div class="col px-0">
-                                            <div class="progress bg-white-100" style="height: 7px;">
-                                                <div class="progress-bar bg-yellow-darker" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <span class="text-secondary">0</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="py-2">
-                                    <a class="row align-items-center mx-gutters-2 font-size-2" href="javascript:;">
-                                        <div class="col-auto">
-                                            <span class="text-dark">1 stars</span>
-                                        </div>
-                                        <div class="col px-0">
-                                            <div class="progress bg-white-100" style="height: 7px;">
-                                                <div class="progress-bar bg-yellow-darker" role="progressbar" style="width: 1%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <span class="text-secondary">4</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- End Ratings -->
-                        </div>
-                    </div>
-
-                    <h4 class="font-size-3 mb-8">1-5 of 44 reviews</h4>
-
-                    <ul class="list-unstyled mb-8">
-                        <li class="mb-4 pb-5 border-bottom">
-                            <div class="d-flex align-items-center mb-3">
-                                <h6 class="mb-0">Amazing Story! You will LOVE it</h6>
-                                <div class="text-yellow-darker ml-3">
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="far fa-star"></small>
-                                </div>
-                            </div>
-                            <p class="mb-4 text-lh-md">Such an incredibly complex story! I had to buy it because there was a waiting list of 30+ at the local library for this book. Thrilled that I made the purchase</p>
-                            <div class="text-gray-600 mb-4">Staci, February 22, 2020 </div>
-                            <ul class="nav">
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 far fa-thumbs-up"></i>
-                                        <span class="ml-2">90</span>
-                                    </a>
-                                </li>
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 far fa-thumbs-down"></i>
-                                        <span class="ml-2">10</span>
-                                    </a>
-                                </li>
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 flaticon-flag"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="mb-4 pb-5 border-bottom">
-                            <div class="d-flex align-items-center mb-3">
-                                <h6 class="mb-0">Get the best seller at a great price.</h6>
-                                <div class="text-yellow-darker ml-3">
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="far fa-star"></small>
-                                </div>
-                            </div>
-                            <p class="mb-4 text-lh-md">Awesome book, great price, fast delivery. Thanks so much.</p>
-                            <div class="text-gray-600 mb-4">Staci, February 22, 2020 </div>
-                            <ul class="nav">
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 far fa-thumbs-up"></i>
-                                        <span class="ml-2">90</span>
-                                    </a>
-                                </li>
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 far fa-thumbs-down"></i>
-                                        <span class="ml-2">10</span>
-                                    </a>
-                                </li>
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 flaticon-flag"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="mb-4 pb-5 border-bottom">
-                            <div class="d-flex align-items-center mb-3">
-                                <h6 class="mb-0">I read this book short...</h6>
-                                <div class="text-yellow-darker ml-3">
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="fas fa-star"></small>
-                                    <small class="far fa-star"></small>
-                                </div>
-                            </div>
-                            <p class="mb-4 text-lh-md">I read this book shortly after I got it and didn't just put it on my TBR shelf mainly because I saw it on Reese Witherspoon's bookclub September read. It was one of the best books I've read this year, and reminded me some of Kristen Hannah's The Great Alone. </p>
-                            <div class="text-gray-600 mb-4">Staci, February 22, 2020 </div>
-                            <ul class="nav">
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 far fa-thumbs-up"></i>
-                                        <span class="ml-2">90</span>
-                                    </a>
-                                </li>
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 far fa-thumbs-down"></i>
-                                        <span class="ml-2">10</span>
-                                    </a>
-                                </li>
-                                <li class="mr-7">
-                                    <a href="#" class="text-gray-600 d-flex align-items-center">
-                                        <i class="text-dark font-size-5 flaticon-flag"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h4 class="font-size-3 mb-4">Write a Review</h4>
-                    <form action="#" id="form-write-review">
-                        <div class="d-flex align-items-center mb-6">
-                            <h6 class="mb-0">Select a rating(required)</h6>
-                            <div class="text-yellow-darker ml-3 font-size-4 form-check-inline">
-                                <input class="form-check-input far fa-star" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <small class="far fa-star"></small>
-                                <small class="far fa-star"></small>
-                                <small class="far fa-star"></small>
-                                <small class="far fa-star"></small>
-                                <small class="far fa-star"></small>
-                            </div>
-                        </div>
-                        <div class="js-form-message form-group mb-4">
-                            <label for="descriptionTextarea" class="form-label text-dark h6 mb-3">Details please! Your review helps other shoppers.</label>
-                            <textarea class="form-control rounded-0 p-4" rows="7" id="descriptionTextarea" placeholder="What did you like or dislike? What should other shoppers know before buying?" required="" data-msg="Please enter your message." data-error-class="u-has-error" data-success-class="u-has-success"></textarea>
-                        </div>
-                        <div class="form-group mb-5">
-                            <label for="inputCompanyName" class="form-label text-dark h6 mb-3">Add a title</label>
-                            <input type="text" class="form-control rounded-0 px-4" name="companyName" id="inputCompanyName" placeholder="3000 characters remaining" aria-label="3000 characters remaining">
-                        </div>
-                        <div class="d-flex">
-                            <button type="submit" class="btn btn-dark btn-wide rounded-0 transition-3d-hover">Submit Review</button>
-                        </div>
-
-                    </form><!--Form submit review-->
-
+                        <jsp:include page="FormReview.jsp" />
 
 
                     <!-- End tab write review from user -->
@@ -490,7 +255,37 @@
 
 <c:import url="/components/Footer.jsp"/>
 
-<script src="../../js/hs.counter.js"></script>
+
+
 <jsp:include page="/importLib.jsp" />
+<script>
+    //animation counter
+    document.getElementById("js-plus").addEventListener("click",(e)=>{
+
+        e.preventDefault();
+        let result= document.getElementById("js-result");
+        let num=parseInt(result.value)+1;
+        result.setAttribute("value",num);
+        console.log(result.value)
+        ;
+    })
+
+    document.getElementById("js-minus").addEventListener("click",(e)=>{
+        e.preventDefault();
+        let result=document.getElementById("js-result");
+        if(result.value>=1){
+            let num=parseInt(result.value)-1;
+            result.setAttribute("value",num);
+            console.log(result.value)
+        }
+        else{
+            return false;
+        }
+    })
+
+
+</script>
+<!-- End Quantity -->
+
 </body>
 </html>
